@@ -2,9 +2,13 @@
 
 TraRTP is a platform to test the robustness of in-network traffic analysis models against the multipath routing phenomenon. Network management and security practitioners can use TraRTP to assess their traffic analysis model development and deployment. We configured four different topologies for TraRTP in this repository. 
 
+![avatar](./overview/overview.png)
+
 ## Multipath routing 
 
 The switch implemented will use two tables to randomly forward packets to different destination hosts. The first table will use a hash function (applied to a 5-tuple consisting of the source and destination IP addresses, IP protocol, and source and destination TCP ports) to select one of the different destinations. The second table will use the computed hash value to forward the packet to the selected destination. 
+
+![avatar](./overview/topo.png)
 
 ## Run the starter code
 
