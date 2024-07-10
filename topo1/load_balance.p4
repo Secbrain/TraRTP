@@ -59,6 +59,7 @@ parser MyParser(packet_in packet,
                 out headers hdr,
                 inout metadata meta,
                 inout standard_metadata_t standard_metadata) {
+    
     state start {
         transition parse_ethernet;
     }
@@ -97,8 +98,47 @@ control MyVerifyChecksum(inout headers hdr, inout metadata meta) {
 control MyIngress(inout headers hdr,
                   inout metadata meta,
                   inout standard_metadata_t standard_metadata) {
+    action drop() {
+        mark_to_drop(standard_metadata);
+    }
+    action set_ecmp_select(bit<16> ecmp_base, bit<32> ecmp_count) {
+        hash(meta.ecmp_select,
+	    HashAlgorithm.crc16,
+	    ecmp_base,
+	    { hdr.ipv4.srcAddr,
+	      hdr.ipv4.dstAddr,
+              hdr.ipv4.protocol,
+              hdr.tcp.srcPort,
+              hdr.tcp.dstPort },
+	    ecmp_count);
+    }
+    action set_nhop(bit<9> port) {
+        standard_metadata.egress_spec = port;
+        hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
+    }
+    table ecmp_group {
+        key = {
+        }
+        actions = {
+            set_ecmp_select;
+        }
+        size = 1024;
+    }
+    table ecmp_nhop {
+        key = {
+            meta.ecmp_select: exact;
+        }
+        actions = {
+            drop;
+            set_nhop;
+        }
+        size = 1024;
+    }
     apply {
-        standard_metadata.egress_spec =2;
+        if (hdr.ipv4.isValid() && hdr.ipv4.ttl > 0) {
+            ecmp_group.apply();
+            ecmp_nhop.apply();
+        }
     }
 }
 
@@ -109,7 +149,9 @@ control MyIngress(inout headers hdr,
 control MyEgress(inout headers hdr,
                  inout metadata meta,
                  inout standard_metadata_t standard_metadata) {
-    apply { }
+    apply {
+
+    }
 }
 
 /*************************************************************************
@@ -118,10 +160,10 @@ control MyEgress(inout headers hdr,
 
 control MyComputeChecksum(inout headers hdr, inout metadata meta) {
      apply {
-        update_checksum(
-            hdr.ipv4.isValid(),
+	update_checksum(
+	    hdr.ipv4.isValid(),
             { hdr.ipv4.version,
-              hdr.ipv4.ihl,
+	      hdr.ipv4.ihl,
               hdr.ipv4.diffserv,
               hdr.ipv4.totalLen,
               hdr.ipv4.identification,
