@@ -10,7 +10,7 @@ The switch implemented will use two tables to randomly forward packets to differ
 
 ![avatar](./overview/topology.png)
 
-## Run the starter code
+## Run the code
 
 1. In your shell, run:
    ```bash
@@ -35,6 +35,6 @@ The switch implemented will use two tables to randomly forward packets to differ
 5. Type `exit` to leave each XTerm and the Mininet command line.
 
 
-## A note about the control plane
+## About the control plane
 
 The control plane logic has already been implemented.  As part of bringing up the Mininet instance, the `make` script will install packet-processing rules in the tables of each switch. These are defined in the `sX-runtime.json` files.
