@@ -1,0 +1,468 @@
+Calling target program-options parser
+[20:28:18.770] [bmv2] [D] [thread 7247] Set default default entry for table 'tbl_load_balance101': load_balance101 - 
+Adding interface s1-eth1 as port 1
+[20:28:18.771] [bmv2] [D] [thread 7247] Adding interface s1-eth1 as port 1
+Adding interface s1-eth2 as port 2
+[20:28:18.808] [bmv2] [D] [thread 7247] Adding interface s1-eth2 as port 2
+Server listening on 0.0.0.0:50051
+[20:28:18.863] [bmv2] [I] [thread 7247] Starting Thrift server on port 9090
+[20:28:18.870] [bmv2] [I] [thread 7247] Thrift server was started
+[20:28:18.948] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Processing packet received on port 1
+[20:28:18.948] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Parser 'parser': start
+[20:28:18.948] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:18.948] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Extracting header 'ethernet'
+[20:28:18.948] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:18.948] [bmv2] [T] [thread 7260] [0.0] [cxt 0] Bytes parsed: 14
+[20:28:18.949] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Parser 'parser': end
+[20:28:18.949] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Pipeline 'ingress': start
+[20:28:18.949] [bmv2] [T] [thread 7260] [0.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:18.949] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Looking up key:
+
+[20:28:18.949] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:18.949] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:18.949] [bmv2] [T] [thread 7260] [0.0] [cxt 0] Action load_balance101
+[20:28:18.949] [bmv2] [T] [thread 7260] [0.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:18.949] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Pipeline 'ingress': end
+[20:28:18.949] [bmv2] [D] [thread 7260] [0.0] [cxt 0] Egress port is 2
+[20:28:18.949] [bmv2] [D] [thread 7263] [0.0] [cxt 0] Pipeline 'egress': start
+[20:28:18.949] [bmv2] [D] [thread 7263] [0.0] [cxt 0] Pipeline 'egress': end
+[20:28:18.949] [bmv2] [D] [thread 7263] [0.0] [cxt 0] Deparser 'deparser': start
+[20:28:18.950] [bmv2] [T] [thread 7263] [0.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:18.950] [bmv2] [D] [thread 7263] [0.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:18.950] [bmv2] [D] [thread 7263] [0.0] [cxt 0] Deparser 'deparser': end
+[20:28:18.950] [bmv2] [D] [thread 7265] [0.0] [cxt 0] Transmitting packet of size 86 out of port 2
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Processing packet received on port 2
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Parser 'parser': start
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Extracting header 'ethernet'
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:19.140] [bmv2] [T] [thread 7260] [1.0] [cxt 0] Bytes parsed: 14
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Parser 'parser': end
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Pipeline 'ingress': start
+[20:28:19.140] [bmv2] [T] [thread 7260] [1.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Looking up key:
+
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:19.140] [bmv2] [T] [thread 7260] [1.0] [cxt 0] Action load_balance101
+[20:28:19.140] [bmv2] [T] [thread 7260] [1.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Pipeline 'ingress': end
+[20:28:19.140] [bmv2] [D] [thread 7260] [1.0] [cxt 0] Egress port is 2
+[20:28:19.140] [bmv2] [D] [thread 7263] [1.0] [cxt 0] Pipeline 'egress': start
+[20:28:19.140] [bmv2] [D] [thread 7263] [1.0] [cxt 0] Pipeline 'egress': end
+[20:28:19.141] [bmv2] [D] [thread 7263] [1.0] [cxt 0] Deparser 'deparser': start
+[20:28:19.141] [bmv2] [T] [thread 7263] [1.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:19.141] [bmv2] [D] [thread 7263] [1.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:19.141] [bmv2] [D] [thread 7263] [1.0] [cxt 0] Deparser 'deparser': end
+[20:28:19.141] [bmv2] [D] [thread 7265] [1.0] [cxt 0] Transmitting packet of size 90 out of port 2
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Processing packet received on port 2
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Parser 'parser': start
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Extracting header 'ethernet'
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:19.816] [bmv2] [T] [thread 7260] [2.0] [cxt 0] Bytes parsed: 14
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Parser 'parser': end
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Pipeline 'ingress': start
+[20:28:19.816] [bmv2] [T] [thread 7260] [2.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Looking up key:
+
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:19.816] [bmv2] [T] [thread 7260] [2.0] [cxt 0] Action load_balance101
+[20:28:19.816] [bmv2] [T] [thread 7260] [2.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Pipeline 'ingress': end
+[20:28:19.816] [bmv2] [D] [thread 7260] [2.0] [cxt 0] Egress port is 2
+[20:28:19.816] [bmv2] [D] [thread 7263] [2.0] [cxt 0] Pipeline 'egress': start
+[20:28:19.816] [bmv2] [D] [thread 7263] [2.0] [cxt 0] Pipeline 'egress': end
+[20:28:19.816] [bmv2] [D] [thread 7263] [2.0] [cxt 0] Deparser 'deparser': start
+[20:28:19.817] [bmv2] [T] [thread 7263] [2.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:19.817] [bmv2] [D] [thread 7263] [2.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:19.817] [bmv2] [D] [thread 7263] [2.0] [cxt 0] Deparser 'deparser': end
+[20:28:19.817] [bmv2] [D] [thread 7265] [2.0] [cxt 0] Transmitting packet of size 90 out of port 2
+[20:28:19.817] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Processing packet received on port 2
+[20:28:19.817] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Parser 'parser': start
+[20:28:19.817] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Extracting header 'ethernet'
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:19.818] [bmv2] [T] [thread 7260] [3.0] [cxt 0] Bytes parsed: 14
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Parser 'parser': end
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Pipeline 'ingress': start
+[20:28:19.818] [bmv2] [T] [thread 7260] [3.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Looking up key:
+
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:19.818] [bmv2] [T] [thread 7260] [3.0] [cxt 0] Action load_balance101
+[20:28:19.818] [bmv2] [T] [thread 7260] [3.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Pipeline 'ingress': end
+[20:28:19.818] [bmv2] [D] [thread 7260] [3.0] [cxt 0] Egress port is 2
+[20:28:19.818] [bmv2] [D] [thread 7263] [3.0] [cxt 0] Pipeline 'egress': start
+[20:28:19.818] [bmv2] [D] [thread 7263] [3.0] [cxt 0] Pipeline 'egress': end
+[20:28:19.818] [bmv2] [D] [thread 7263] [3.0] [cxt 0] Deparser 'deparser': start
+[20:28:19.818] [bmv2] [T] [thread 7263] [3.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:19.818] [bmv2] [D] [thread 7263] [3.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:19.818] [bmv2] [D] [thread 7263] [3.0] [cxt 0] Deparser 'deparser': end
+[20:28:19.819] [bmv2] [D] [thread 7265] [3.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Processing packet received on port 1
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Parser 'parser': start
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Extracting header 'ethernet'
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:19.974] [bmv2] [T] [thread 7260] [4.0] [cxt 0] Bytes parsed: 14
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Parser 'parser': end
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Pipeline 'ingress': start
+[20:28:19.974] [bmv2] [T] [thread 7260] [4.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Looking up key:
+
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:19.974] [bmv2] [T] [thread 7260] [4.0] [cxt 0] Action load_balance101
+[20:28:19.974] [bmv2] [T] [thread 7260] [4.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Pipeline 'ingress': end
+[20:28:19.974] [bmv2] [D] [thread 7260] [4.0] [cxt 0] Egress port is 2
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Processing packet received on port 1
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Parser 'parser': start
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Extracting header 'ethernet'
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:19.974] [bmv2] [T] [thread 7260] [5.0] [cxt 0] Bytes parsed: 14
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Parser 'parser': end
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Pipeline 'ingress': start
+[20:28:19.974] [bmv2] [T] [thread 7260] [5.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Looking up key:
+
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:19.974] [bmv2] [T] [thread 7260] [5.0] [cxt 0] Action load_balance101
+[20:28:19.974] [bmv2] [T] [thread 7260] [5.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Pipeline 'ingress': end
+[20:28:19.974] [bmv2] [D] [thread 7260] [5.0] [cxt 0] Egress port is 2
+[20:28:19.974] [bmv2] [D] [thread 7263] [4.0] [cxt 0] Pipeline 'egress': start
+[20:28:19.974] [bmv2] [D] [thread 7263] [4.0] [cxt 0] Pipeline 'egress': end
+[20:28:19.974] [bmv2] [D] [thread 7263] [4.0] [cxt 0] Deparser 'deparser': start
+[20:28:19.974] [bmv2] [T] [thread 7263] [4.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:19.974] [bmv2] [D] [thread 7263] [4.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:19.974] [bmv2] [D] [thread 7263] [4.0] [cxt 0] Deparser 'deparser': end
+[20:28:19.974] [bmv2] [D] [thread 7263] [5.0] [cxt 0] Pipeline 'egress': start
+[20:28:19.974] [bmv2] [D] [thread 7263] [5.0] [cxt 0] Pipeline 'egress': end
+[20:28:19.974] [bmv2] [D] [thread 7263] [5.0] [cxt 0] Deparser 'deparser': start
+[20:28:19.974] [bmv2] [T] [thread 7263] [5.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:19.974] [bmv2] [D] [thread 7263] [5.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:19.974] [bmv2] [D] [thread 7265] [4.0] [cxt 0] Transmitting packet of size 90 out of port 2
+[20:28:19.974] [bmv2] [D] [thread 7263] [5.0] [cxt 0] Deparser 'deparser': end
+[20:28:19.975] [bmv2] [D] [thread 7265] [5.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Processing packet received on port 2
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Parser 'parser': start
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Extracting header 'ethernet'
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:20.104] [bmv2] [T] [thread 7260] [6.0] [cxt 0] Bytes parsed: 14
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Parser 'parser': end
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Pipeline 'ingress': start
+[20:28:20.104] [bmv2] [T] [thread 7260] [6.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Looking up key:
+
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:20.104] [bmv2] [T] [thread 7260] [6.0] [cxt 0] Action load_balance101
+[20:28:20.104] [bmv2] [T] [thread 7260] [6.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Pipeline 'ingress': end
+[20:28:20.104] [bmv2] [D] [thread 7260] [6.0] [cxt 0] Egress port is 2
+[20:28:20.104] [bmv2] [D] [thread 7263] [6.0] [cxt 0] Pipeline 'egress': start
+[20:28:20.104] [bmv2] [D] [thread 7263] [6.0] [cxt 0] Pipeline 'egress': end
+[20:28:20.104] [bmv2] [D] [thread 7263] [6.0] [cxt 0] Deparser 'deparser': start
+[20:28:20.104] [bmv2] [T] [thread 7263] [6.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:20.104] [bmv2] [D] [thread 7263] [6.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:20.104] [bmv2] [D] [thread 7263] [6.0] [cxt 0] Deparser 'deparser': end
+[20:28:20.104] [bmv2] [D] [thread 7265] [6.0] [cxt 0] Transmitting packet of size 90 out of port 2
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Processing packet received on port 1
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Parser 'parser': start
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Extracting header 'ethernet'
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:20.112] [bmv2] [T] [thread 7260] [7.0] [cxt 0] Bytes parsed: 14
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Parser 'parser': end
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Pipeline 'ingress': start
+[20:28:20.112] [bmv2] [T] [thread 7260] [7.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Looking up key:
+
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:20.112] [bmv2] [T] [thread 7260] [7.0] [cxt 0] Action load_balance101
+[20:28:20.112] [bmv2] [T] [thread 7260] [7.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Pipeline 'ingress': end
+[20:28:20.112] [bmv2] [D] [thread 7260] [7.0] [cxt 0] Egress port is 2
+[20:28:20.112] [bmv2] [D] [thread 7263] [7.0] [cxt 0] Pipeline 'egress': start
+[20:28:20.112] [bmv2] [D] [thread 7263] [7.0] [cxt 0] Pipeline 'egress': end
+[20:28:20.112] [bmv2] [D] [thread 7263] [7.0] [cxt 0] Deparser 'deparser': start
+[20:28:20.112] [bmv2] [T] [thread 7263] [7.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:20.113] [bmv2] [D] [thread 7263] [7.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:20.113] [bmv2] [D] [thread 7263] [7.0] [cxt 0] Deparser 'deparser': end
+[20:28:20.113] [bmv2] [D] [thread 7265] [7.0] [cxt 0] Transmitting packet of size 90 out of port 2
+[20:28:20.166] [bmv2] [W] [thread 7278] [P4Runtime] p4::tmp::P4DeviceConfig is deprecated
+[20:28:20.170] [bmv2] [D] [thread 7278] Set default default entry for table 'tbl_load_balance101': load_balance101 - 
+[20:28:20.172] [bmv2] [D] [thread 7278] simple_switch target has been notified of a config swap
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Processing packet received on port 2
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Parser 'parser': start
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Extracting header 'ethernet'
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:23.664] [bmv2] [T] [thread 7260] [8.0] [cxt 0] Bytes parsed: 14
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Parser 'parser': end
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Pipeline 'ingress': start
+[20:28:23.664] [bmv2] [T] [thread 7260] [8.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Looking up key:
+
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:23.664] [bmv2] [T] [thread 7260] [8.0] [cxt 0] Action load_balance101
+[20:28:23.664] [bmv2] [T] [thread 7260] [8.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Pipeline 'ingress': end
+[20:28:23.664] [bmv2] [D] [thread 7260] [8.0] [cxt 0] Egress port is 2
+[20:28:23.664] [bmv2] [D] [thread 7263] [8.0] [cxt 0] Pipeline 'egress': start
+[20:28:23.664] [bmv2] [D] [thread 7263] [8.0] [cxt 0] Pipeline 'egress': end
+[20:28:23.664] [bmv2] [D] [thread 7263] [8.0] [cxt 0] Deparser 'deparser': start
+[20:28:23.664] [bmv2] [T] [thread 7263] [8.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:23.664] [bmv2] [D] [thread 7263] [8.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:23.664] [bmv2] [D] [thread 7263] [8.0] [cxt 0] Deparser 'deparser': end
+[20:28:23.664] [bmv2] [D] [thread 7265] [8.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Processing packet received on port 1
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Parser 'parser': start
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Extracting header 'ethernet'
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:24.164] [bmv2] [T] [thread 7260] [9.0] [cxt 0] Bytes parsed: 14
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Parser 'parser': end
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Pipeline 'ingress': start
+[20:28:24.164] [bmv2] [T] [thread 7260] [9.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Looking up key:
+
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:24.164] [bmv2] [T] [thread 7260] [9.0] [cxt 0] Action load_balance101
+[20:28:24.164] [bmv2] [T] [thread 7260] [9.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Pipeline 'ingress': end
+[20:28:24.164] [bmv2] [D] [thread 7260] [9.0] [cxt 0] Egress port is 2
+[20:28:24.164] [bmv2] [D] [thread 7263] [9.0] [cxt 0] Pipeline 'egress': start
+[20:28:24.164] [bmv2] [D] [thread 7263] [9.0] [cxt 0] Pipeline 'egress': end
+[20:28:24.164] [bmv2] [D] [thread 7263] [9.0] [cxt 0] Deparser 'deparser': start
+[20:28:24.164] [bmv2] [T] [thread 7263] [9.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:24.164] [bmv2] [D] [thread 7263] [9.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:24.164] [bmv2] [D] [thread 7263] [9.0] [cxt 0] Deparser 'deparser': end
+[20:28:24.164] [bmv2] [D] [thread 7265] [9.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Processing packet received on port 2
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Parser 'parser': start
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Extracting header 'ethernet'
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:30.820] [bmv2] [T] [thread 7260] [10.0] [cxt 0] Bytes parsed: 14
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Parser 'parser': end
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Pipeline 'ingress': start
+[20:28:30.820] [bmv2] [T] [thread 7260] [10.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Looking up key:
+
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:30.820] [bmv2] [T] [thread 7260] [10.0] [cxt 0] Action load_balance101
+[20:28:30.820] [bmv2] [T] [thread 7260] [10.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Pipeline 'ingress': end
+[20:28:30.820] [bmv2] [D] [thread 7260] [10.0] [cxt 0] Egress port is 2
+[20:28:30.820] [bmv2] [D] [thread 7263] [10.0] [cxt 0] Pipeline 'egress': start
+[20:28:30.820] [bmv2] [D] [thread 7263] [10.0] [cxt 0] Pipeline 'egress': end
+[20:28:30.820] [bmv2] [D] [thread 7263] [10.0] [cxt 0] Deparser 'deparser': start
+[20:28:30.820] [bmv2] [T] [thread 7263] [10.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:30.820] [bmv2] [D] [thread 7263] [10.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:30.820] [bmv2] [D] [thread 7263] [10.0] [cxt 0] Deparser 'deparser': end
+[20:28:30.820] [bmv2] [D] [thread 7265] [10.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Processing packet received on port 1
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Parser 'parser': start
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Extracting header 'ethernet'
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:32.612] [bmv2] [T] [thread 7260] [11.0] [cxt 0] Bytes parsed: 14
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Parser 'parser': end
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Pipeline 'ingress': start
+[20:28:32.612] [bmv2] [T] [thread 7260] [11.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Looking up key:
+
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:32.612] [bmv2] [T] [thread 7260] [11.0] [cxt 0] Action load_balance101
+[20:28:32.612] [bmv2] [T] [thread 7260] [11.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Pipeline 'ingress': end
+[20:28:32.612] [bmv2] [D] [thread 7260] [11.0] [cxt 0] Egress port is 2
+[20:28:32.612] [bmv2] [D] [thread 7263] [11.0] [cxt 0] Pipeline 'egress': start
+[20:28:32.612] [bmv2] [D] [thread 7263] [11.0] [cxt 0] Pipeline 'egress': end
+[20:28:32.612] [bmv2] [D] [thread 7263] [11.0] [cxt 0] Deparser 'deparser': start
+[20:28:32.612] [bmv2] [T] [thread 7263] [11.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:32.612] [bmv2] [D] [thread 7263] [11.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:32.612] [bmv2] [D] [thread 7263] [11.0] [cxt 0] Deparser 'deparser': end
+[20:28:32.612] [bmv2] [D] [thread 7265] [11.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Processing packet received on port 2
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Parser 'parser': start
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Extracting header 'ethernet'
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:44.132] [bmv2] [T] [thread 7260] [12.0] [cxt 0] Bytes parsed: 14
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Parser 'parser': end
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Pipeline 'ingress': start
+[20:28:44.132] [bmv2] [T] [thread 7260] [12.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Looking up key:
+
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:44.132] [bmv2] [T] [thread 7260] [12.0] [cxt 0] Action load_balance101
+[20:28:44.132] [bmv2] [T] [thread 7260] [12.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Pipeline 'ingress': end
+[20:28:44.132] [bmv2] [D] [thread 7260] [12.0] [cxt 0] Egress port is 2
+[20:28:44.132] [bmv2] [D] [thread 7263] [12.0] [cxt 0] Pipeline 'egress': start
+[20:28:44.132] [bmv2] [D] [thread 7263] [12.0] [cxt 0] Pipeline 'egress': end
+[20:28:44.132] [bmv2] [D] [thread 7263] [12.0] [cxt 0] Deparser 'deparser': start
+[20:28:44.132] [bmv2] [T] [thread 7263] [12.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:44.132] [bmv2] [D] [thread 7263] [12.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:44.132] [bmv2] [D] [thread 7263] [12.0] [cxt 0] Deparser 'deparser': end
+[20:28:44.132] [bmv2] [D] [thread 7265] [12.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Processing packet received on port 1
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Parser 'parser': start
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Extracting header 'ethernet'
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Parser state 'start': key is 86dd
+[20:28:48.741] [bmv2] [T] [thread 7260] [13.0] [cxt 0] Bytes parsed: 14
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Parser 'parser': end
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Pipeline 'ingress': start
+[20:28:48.741] [bmv2] [T] [thread 7260] [13.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Looking up key:
+
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Action entry is load_balance101 - 
+[20:28:48.741] [bmv2] [T] [thread 7260] [13.0] [cxt 0] Action load_balance101
+[20:28:48.741] [bmv2] [T] [thread 7260] [13.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Pipeline 'ingress': end
+[20:28:48.741] [bmv2] [D] [thread 7260] [13.0] [cxt 0] Egress port is 2
+[20:28:48.741] [bmv2] [D] [thread 7263] [13.0] [cxt 0] Pipeline 'egress': start
+[20:28:48.741] [bmv2] [D] [thread 7263] [13.0] [cxt 0] Pipeline 'egress': end
+[20:28:48.741] [bmv2] [D] [thread 7263] [13.0] [cxt 0] Deparser 'deparser': start
+[20:28:48.741] [bmv2] [T] [thread 7263] [13.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:28:48.741] [bmv2] [D] [thread 7263] [13.0] [cxt 0] Deparsing header 'ethernet'
+[20:28:48.741] [bmv2] [D] [thread 7263] [13.0] [cxt 0] Deparser 'deparser': end
+[20:28:48.741] [bmv2] [D] [thread 7265] [13.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Processing packet received on port 2
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Parser 'parser': start
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Extracting header 'ethernet'
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Parser state 'start': key is 86dd
+[20:29:11.780] [bmv2] [T] [thread 7260] [14.0] [cxt 0] Bytes parsed: 14
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Parser 'parser': end
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Pipeline 'ingress': start
+[20:29:11.780] [bmv2] [T] [thread 7260] [14.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Looking up key:
+
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Action entry is load_balance101 - 
+[20:29:11.780] [bmv2] [T] [thread 7260] [14.0] [cxt 0] Action load_balance101
+[20:29:11.780] [bmv2] [T] [thread 7260] [14.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Pipeline 'ingress': end
+[20:29:11.780] [bmv2] [D] [thread 7260] [14.0] [cxt 0] Egress port is 2
+[20:29:11.780] [bmv2] [D] [thread 7263] [14.0] [cxt 0] Pipeline 'egress': start
+[20:29:11.780] [bmv2] [D] [thread 7263] [14.0] [cxt 0] Pipeline 'egress': end
+[20:29:11.780] [bmv2] [D] [thread 7263] [14.0] [cxt 0] Deparser 'deparser': start
+[20:29:11.780] [bmv2] [T] [thread 7263] [14.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:29:11.780] [bmv2] [D] [thread 7263] [14.0] [cxt 0] Deparsing header 'ethernet'
+[20:29:11.780] [bmv2] [D] [thread 7263] [14.0] [cxt 0] Deparser 'deparser': end
+[20:29:11.780] [bmv2] [D] [thread 7265] [14.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Processing packet received on port 1
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Parser 'parser': start
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Extracting header 'ethernet'
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Parser state 'start': key is 86dd
+[20:29:22.022] [bmv2] [T] [thread 7260] [15.0] [cxt 0] Bytes parsed: 14
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Parser 'parser': end
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Pipeline 'ingress': start
+[20:29:22.022] [bmv2] [T] [thread 7260] [15.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Looking up key:
+
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:29:22.022] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Action entry is load_balance101 - 
+[20:29:22.022] [bmv2] [T] [thread 7260] [15.0] [cxt 0] Action load_balance101
+[20:29:22.022] [bmv2] [T] [thread 7260] [15.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:29:22.023] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Pipeline 'ingress': end
+[20:29:22.023] [bmv2] [D] [thread 7260] [15.0] [cxt 0] Egress port is 2
+[20:29:22.023] [bmv2] [D] [thread 7263] [15.0] [cxt 0] Pipeline 'egress': start
+[20:29:22.023] [bmv2] [D] [thread 7263] [15.0] [cxt 0] Pipeline 'egress': end
+[20:29:22.023] [bmv2] [D] [thread 7263] [15.0] [cxt 0] Deparser 'deparser': start
+[20:29:22.023] [bmv2] [T] [thread 7263] [15.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:29:22.023] [bmv2] [D] [thread 7263] [15.0] [cxt 0] Deparsing header 'ethernet'
+[20:29:22.023] [bmv2] [D] [thread 7263] [15.0] [cxt 0] Deparser 'deparser': end
+[20:29:22.023] [bmv2] [D] [thread 7265] [15.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Processing packet received on port 2
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Parser 'parser': start
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Extracting header 'ethernet'
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Parser state 'start': key is 86dd
+[20:30:05.028] [bmv2] [T] [thread 7260] [16.0] [cxt 0] Bytes parsed: 14
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Parser 'parser': end
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Pipeline 'ingress': start
+[20:30:05.028] [bmv2] [T] [thread 7260] [16.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Looking up key:
+
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:30:05.028] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Action entry is load_balance101 - 
+[20:30:05.028] [bmv2] [T] [thread 7260] [16.0] [cxt 0] Action load_balance101
+[20:30:05.029] [bmv2] [T] [thread 7260] [16.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:30:05.029] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Pipeline 'ingress': end
+[20:30:05.029] [bmv2] [D] [thread 7260] [16.0] [cxt 0] Egress port is 2
+[20:30:05.029] [bmv2] [D] [thread 7263] [16.0] [cxt 0] Pipeline 'egress': start
+[20:30:05.029] [bmv2] [D] [thread 7263] [16.0] [cxt 0] Pipeline 'egress': end
+[20:30:05.029] [bmv2] [D] [thread 7263] [16.0] [cxt 0] Deparser 'deparser': start
+[20:30:05.029] [bmv2] [T] [thread 7263] [16.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:30:05.029] [bmv2] [D] [thread 7263] [16.0] [cxt 0] Deparsing header 'ethernet'
+[20:30:05.029] [bmv2] [D] [thread 7263] [16.0] [cxt 0] Deparser 'deparser': end
+[20:30:05.029] [bmv2] [D] [thread 7265] [16.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Processing packet received on port 1
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Parser 'parser': start
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Extracting header 'ethernet'
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Parser state 'start': key is 86dd
+[20:30:29.604] [bmv2] [T] [thread 7260] [17.0] [cxt 0] Bytes parsed: 14
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Parser 'parser': end
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Pipeline 'ingress': start
+[20:30:29.604] [bmv2] [T] [thread 7260] [17.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Looking up key:
+
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Action entry is load_balance101 - 
+[20:30:29.604] [bmv2] [T] [thread 7260] [17.0] [cxt 0] Action load_balance101
+[20:30:29.604] [bmv2] [T] [thread 7260] [17.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Pipeline 'ingress': end
+[20:30:29.604] [bmv2] [D] [thread 7260] [17.0] [cxt 0] Egress port is 2
+[20:30:29.604] [bmv2] [D] [thread 7263] [17.0] [cxt 0] Pipeline 'egress': start
+[20:30:29.604] [bmv2] [D] [thread 7263] [17.0] [cxt 0] Pipeline 'egress': end
+[20:30:29.604] [bmv2] [D] [thread 7263] [17.0] [cxt 0] Deparser 'deparser': start
+[20:30:29.604] [bmv2] [T] [thread 7263] [17.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:30:29.604] [bmv2] [D] [thread 7263] [17.0] [cxt 0] Deparsing header 'ethernet'
+[20:30:29.604] [bmv2] [D] [thread 7263] [17.0] [cxt 0] Deparser 'deparser': end
+[20:30:29.604] [bmv2] [D] [thread 7265] [17.0] [cxt 0] Transmitting packet of size 70 out of port 2
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Processing packet received on port 2
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Parser 'parser': start
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Parser 'parser' entering state 'start'
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Extracting header 'ethernet'
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Parser state 'start': key is 86dd
+[20:31:53.574] [bmv2] [T] [thread 7260] [18.0] [cxt 0] Bytes parsed: 14
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Parser 'parser': end
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Pipeline 'ingress': start
+[20:31:53.574] [bmv2] [T] [thread 7260] [18.0] [cxt 0] Applying table 'tbl_load_balance101'
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Looking up key:
+
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Table 'tbl_load_balance101': miss
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Action entry is load_balance101 - 
+[20:31:53.574] [bmv2] [T] [thread 7260] [18.0] [cxt 0] Action load_balance101
+[20:31:53.574] [bmv2] [T] [thread 7260] [18.0] [cxt 0] load_balance.p4(101) Primitive standard_metadata.egress_spec =2
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Pipeline 'ingress': end
+[20:31:53.574] [bmv2] [D] [thread 7260] [18.0] [cxt 0] Egress port is 2
+[20:31:53.575] [bmv2] [D] [thread 7263] [18.0] [cxt 0] Pipeline 'egress': start
+[20:31:53.575] [bmv2] [D] [thread 7263] [18.0] [cxt 0] Pipeline 'egress': end
+[20:31:53.575] [bmv2] [D] [thread 7263] [18.0] [cxt 0] Deparser 'deparser': start
+[20:31:53.575] [bmv2] [T] [thread 7263] [18.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[20:31:53.575] [bmv2] [D] [thread 7263] [18.0] [cxt 0] Deparsing header 'ethernet'
+[20:31:53.575] [bmv2] [D] [thread 7263] [18.0] [cxt 0] Deparser 'deparser': end
+[20:31:53.575] [bmv2] [D] [thread 7265] [18.0] [cxt 0] Transmitting packet of size 70 out of port 2
